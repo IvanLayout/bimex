@@ -120,16 +120,6 @@ $(() => {
 		})
 	}
 
-	$('body').on('click', '.accordion__title', function (e) {
-		e.preventDefault()
-
-		if ($(this).closest('.accordion__item').hasClass('_active')) {
-			$(this).closest('.accordion__item').removeClass('_active')
-		} else {
-			$(this).closest('.accordion__item').addClass('_active')
-		}
-	})
-
 	// Fancybox
 	Fancybox.defaults.autoFocus = false
 	Fancybox.defaults.dragToClose = false
@@ -189,37 +179,6 @@ $(() => {
 	})
 })
 
-
-$(window).on('load', () => {
-	// Шапка
-	if( $(window).scrollTop() > 0 ) {
-		$('.header').addClass('fixed')
-	} else{
-		$('.header').removeClass('fixed')
-	}
-
-	if( $(window).scrollTop() > $(window).height() ) {
-		$('.page-anchor').addClass('_fixed')
-	} else{
-		$('.page-anchor').removeClass('_fixed')
-	}
-
-	$(window).scroll(function(){
-		if( $(window).scrollTop() > 0 ) {
-			$('.header').addClass('fixed')
-		} else{
-			$('.header').removeClass('fixed')
-		}
-
-		if( $(window).scrollTop() > $(window).height() ) {
-			$('.page-anchor').addClass('_fixed')
-		} else{
-			$('.page-anchor').removeClass('_fixed')
-		}
-	})
-})
-
-
 // Вспомогательные функции
 const widthScroll = () => {
 	let div = document.createElement('div')
@@ -252,44 +211,3 @@ function setHeight(className){
 }
 
 const is_touch_device = () => !!('ontouchstart' in window)
-
-
-function addScriptsURL(url) {
-	let jsLoad = document.querySelector(".js-load")
-
-	if (jsLoad) {
-		var src = document.createElement('script')
-		src.src = url
-		jsLoad.appendChild(src)
-
-		src.addEventListener('load', () => {
-			mapInit()
-		});
-	}
-}
-
-
-// map
-function mapInit(){
-	ymaps.ready(() => {
-		var myMap = new ymaps.Map("map", {
-			center: [55.673458, 37.447728],
-			zoom: 10
-		}),
-		myPlacemark = new ymaps.Placemark([55.673458, 37.447728], {
-			balloonContent: '', iconCaption: 'Москва, Никулинская, 18'
-		}),
-		myPlacemark2 = new ymaps.Placemark([55.749207, 37.762138], {
-			balloonContent: '', iconCaption: 'Москва, улица Плеханова, 12с3'
-		}),
-		myPlacemark3 = new ymaps.Placemark([55.686919, 37.432906], {
-			balloonContent: '', iconCaption: 'Москва, улица Генерала Дорохова, 27'
-		}),
-		myPlacemark4 = new ymaps.Placemark([55.582528, 37.611814], {
-			balloonContent: '', iconCaption: 'Москва, Дорожная улица, 50к1'
-		})
-
-		myMap.geoObjects.add(myPlacemark).add(myPlacemark2).add(myPlacemark3).add(myPlacemark4)
-		myMap.behaviors.disable('scrollZoom')
-	})
-}

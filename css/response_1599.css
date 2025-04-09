@@ -5,7 +5,7 @@
 	}
 
 
-	.main-about__video {
+	.main-about__video1 {
 		top: 34%;
 		left: 12%;
 		width: 20.474%;
@@ -43,6 +43,22 @@
 	.slider-button-prev,
 	.slider-button-next{
 		bottom: 36px;
+	}
+
+	
+
+	.news__wrap{
+		width: 100%;
+	}
+
+	.news-big__colr {
+		padding: 50px 16px 50px 30px;
+	}
+
+	.news__item-box{
+		padding-left: 20px;
+		padding-right: 20px;
+		width: 89%;
 	}
 
 

@@ -64,6 +64,90 @@
 		display: none;
 	}
 
+	.career__coll{
+		width: 100%;
+	}
+
+	.career__colr{
+		width: 100%;
+		margin-top: 30px;
+	}
+
+
+	.main-title._mob{
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.service__coll{
+		width: 100%;
+	}
+
+	.service__colr{
+		width: 100%;
+		margin-top: 30px;
+	}
+
+	.service__colr .main-title{
+		display: none;
+	}
+
+	.service .text-block{
+		margin-top: 0;
+	}
+
+	.contacts__flex{
+		margin-top: 15px;
+	}
+
+	.contacts__map{
+		width: 100%;
+	}
+
+	.contacts__colr{
+		width: 100%;
+		margin-top: 30px;
+	}
+
+	.information__colr{
+		padding-left: 16px;
+		padding-right: 16px;
+	}
+
+
+	.news-big__colr{
+		padding: 30px 0 30px 20px;
+	}
+
+	.news-big__name {
+		font-size: 24px;
+	}
+
+	.news-big__text{
+		padding-left: 70px;
+	}
+
+	.news-big__text::before {
+		width: 50px;
+	}
+
+
+	.news__item-img{
+		width: 100%;
+	}
+
+	.news__item-box{
+		padding: 24px 0 0;
+		width: 100%;
+		margin: 0;
+		min-height: 1px;
+	}
+
+	.wrap-btn{
+		margin-top: 40px;
+	}
+
+
 	.footer__logo {
 		width: auto;
 	}

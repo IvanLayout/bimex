@@ -651,19 +651,25 @@ button
 	transition: color .2s linear;
 	display: block;
 	padding-right: 7px;
+	position: relative;
+	z-index: 81;
 }
 
 .header__lang span{
 	display: inline-block;
 	padding-bottom: 2px;
 	border-bottom: 2px solid #0090d4;
-	transition: border .2s linear;
+	transition: color .2s linear;
 }
 
 @media (any-hover: hover){
 	.header__lang:hover span{
-		border-bottom-color: var(--color_hover);
+		color: #0090d4;
 	}
+}
+
+.header__lang._active span{
+	color: #0090d4;
 }
 
 .header__lang svg{
@@ -681,20 +687,21 @@ button
 }
 
 .mini-modal__modal_lang{
-	left: auto;
-	right: 0;
-	box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1), 0 16px 16px 0 rgba(0, 0, 0, 0.09), 0 37px 22px 0 rgba(0, 0, 0, 0.05), 0 66px 26px 0 rgba(0, 0, 0, 0.01), 0 103px 29px 0 rgba(0, 0, 0, 0);
+	top: -5px;
+	left: -4px;
+	border: 1px solid #E4F0F6;
 	background: #fff;
 	border-radius: 4px;
 	width: auto;
-	padding: 15px;
+	padding: 31px 3px 9px 3px;
+	min-width: 30px;
 }
 
 .mini-modal__modal_lang div{
 	font-size: 11px;
 	line-height: normal;
 	text-transform: uppercase;
-	color: var(--color_head);
+	color: #20242C;
 	white-space: nowrap;
 }
 
@@ -703,16 +710,14 @@ button
 }
 
 .mini-modal__modal_lang a{
-	color: var(--color_head);
+	color:  #20242C;
 	text-decoration: none;
-	transition: border .2s linear;
-	padding-bottom: 4px;
-	border-bottom: 1px solid transparent;
+	transition: color .2s linear;
 }
 
 @media (any-hover: hover){
 	.mini-modal__modal_lang a:hover{
-		border-bottom-color: var(--color_hover);
+		color: #0090d4;
 	}
 }
 
@@ -749,7 +754,7 @@ button
 }
 
 .mob-menu-btn span:nth-child(3){
-	background: #FFB700;
+	background: var(--color_hover);
 }
 
 .mob-menu-btn span + span
@@ -1025,7 +1030,6 @@ button
 
 .form__flex
 {
-    flex-wrap: nowrap;
 	margin-left: -20px;
 }
 
@@ -1346,6 +1350,22 @@ button
     transition: color .2s linear;
 }
 
+.slider-button-prev._small,
+.slider-button-next._small{
+	width: 30px;
+	height: 16px;
+}
+
+.slider-button-prev._white,
+.slider-button-next._white{
+	color: rgba(255, 255, 255, .2);
+}
+
+.slider-button-prev_white,
+.slider-button-next_white{
+	color: #ffffff;
+}
+
 @media (any-hover: hover)
 {
     .slider-button-prev:hover,
@@ -1353,8 +1373,13 @@ button
     {
         z-index: 11;
 
-        color: #ffb700;
+        color: var(--color_hover);
     }
+	
+	.slider-button-prev._white:hover,
+	.slider-button-next._white:hover{
+		color: rgba(255, 255, 255, .8);
+	}
 }
 
 .slider-button-prev svg,
@@ -1367,6 +1392,12 @@ button
 
     fill: currentColor;
     stroke: none;
+}
+
+.slider-button-prev._small svg,
+.slider-button-next._small svg{
+	width: 30px;
+	height: 16px;
 }
 
 .slider-button-prev
@@ -1662,7 +1693,7 @@ button
 	width: 3.805%;
 	height: 2px;
 	margin-top: -1px;
-	background: #ffb700;
+	background: var(--color_hover);
 }
 
 .slide-inner__title{
@@ -1828,7 +1859,7 @@ button
 	width: 10.58%;
 	height: 2px;
 	margin-top: -1px;
-	background: #FFB700;
+	background: var(--color_hover);
 }
 
 .main-about__text{
@@ -1854,7 +1885,7 @@ button
 	display: none;
 }
 
-.main-about__video{
+.main-about__video1{
 	position: absolute;
 	left: 16%;
     top: 43%;
@@ -1862,14 +1893,14 @@ button
 	z-index: 3;
 }
 
-.main-about__video-wrap{
+.main-about__video1-wrap{
 	position: relative;
 	padding-bottom: 63.37%;
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 92% 89%, 0 89%);
 	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 92% 89%, 0 89%);
 }
 
-.main-about__video video{
+.main-about__video1 video{
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -2243,6 +2274,11 @@ button
 .news-big__coll{
 	width: 75.781%;
 	padding-bottom: 30px;
+	align-self: flex-start;
+}
+
+.news-big__coll_pad{
+	padding-bottom: 0;
 }
 
 .news-big__img{
@@ -2267,7 +2303,13 @@ button
 	border-radius: 4px;
 	margin-left: -18.209%;
 	position: relative;
+	z-index: 11;
 	padding: 68px 16px 70px 40px;
+}
+
+.news-big__colr_pad{
+	padding-top: 58px;
+	padding-bottom: 83px;
 }
 
 .news-big__name{
@@ -2305,7 +2347,11 @@ button
 	top: 7px;
 	width: 90px;
 	height: 1px;
-	background: #ffb700;
+	background: var(--color_hover);
+}
+
+.news-big__text-block{
+	margin-top: 30px;
 }
 
 
@@ -2423,6 +2469,7 @@ button
 .information__colr-wrap{
 	margin: 0 auto;
 	max-width: 507px;
+	padding: 50px 0;
 }
 
 .information__text p{
@@ -2436,6 +2483,51 @@ button
 .information__btn{
 	margin-top: 53px;
 }
+
+
+.news__main-title{
+	margin: 60px 0 16px;
+}
+
+
+.news-big__slider .slider-button-prev{
+	left: 38px;
+	bottom: 20px;
+	right: auto;
+	margin: 0;
+}
+
+.news-big__slider .slider-button-next{
+	bottom: 20px;
+	right: calc(24% + 30px);
+	margin: 0;
+}
+
+.news-thumbs{
+	margin: 0 0 0 -20px;
+}
+
+.news-thumbs__item{
+	margin: 20px 0 0 20px;
+	
+	width: calc(100%/3 - 20px);
+}
+
+.news-thumbs__item-wrap{
+	position: relative;
+	padding-bottom: 47.2%;
+}
+
+.news-thumbs__item img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 
 
 /*------------
@@ -2635,19 +2727,24 @@ button
 	transition: color .2s linear;
 	display: block;
 	padding-right: 7px;
+	z-index: 81;
 }
 
 .footer__lang span{
 	display: inline-block;
 	padding-bottom: 2px;
 	border-bottom: 2px solid #0090d4;
-	transition: border .2s linear;
+	transition: color .2s linear;
 }
 
 @media (any-hover: hover){
 	.footer__lang:hover span{
-		border-bottom-color: var(--color_hover);
+		color: #0090d4;
 	}
+}
+
+.footer__lang._active span{
+	color: #0090d4;
 }
 
 .footer__lang svg{
@@ -2662,42 +2759,6 @@ button
 
 .footer__lang._active svg{
 	transform: rotate(180deg);
-}
-
-.mini-modal__modal_lang{
-	left: auto;
-	right: 0;
-	box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.1), 0 16px 16px 0 rgba(0, 0, 0, 0.09), 0 37px 22px 0 rgba(0, 0, 0, 0.05), 0 66px 26px 0 rgba(0, 0, 0, 0.01), 0 103px 29px 0 rgba(0, 0, 0, 0);
-	background: #fff;
-	border-radius: 4px;
-	width: auto;
-	padding: 15px;
-}
-
-.mini-modal__modal_lang div{
-	font-size: 11px;
-	line-height: normal;
-	text-transform: uppercase;
-	color: #000000;
-	white-space: nowrap;
-}
-
-.mini-modal__modal_lang div + div{
-	margin-top: 14px;
-}
-
-.mini-modal__modal_lang a{
-	color: #000000;
-	text-decoration: none;
-	transition: border .2s linear;
-	padding-bottom: 4px;
-	border-bottom: 1px solid transparent;
-}
-
-@media (any-hover: hover){
-	.mini-modal__modal_lang a:hover{
-		border-bottom-color: var(--color_hover);
-	}
 }
 
 .footer__bot{

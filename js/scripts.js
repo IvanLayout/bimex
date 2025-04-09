@@ -173,13 +173,51 @@ $(() => {
 				enabled: true,
 				loadedClass: 'loaded',
 				checkInView: true,
-				loadOnTransitionStart: true,
-                preloaderClass: 'lazy-preloader'
+				loadOnTransitionStart: true
 			},
 			navigation: {
 				nextEl: '.slider-button-next',
 				prevEl: '.slider-button-prev'
 			},
+		})
+	}
+
+
+	if ($('.news-big__slider').length) {
+		newsImgSlider = new Swiper(".news-big__slider", {
+			spaceBetween: 20,
+			slidesPerView: 1,
+			watchSlidesProgress: true,
+			watchOverflow: true,
+			preloadImages: false,
+			lazy: {
+				loadPrevNext: true,
+				elementClass: 'lazyload',
+				enabled: true,
+				loadedClass: 'loaded',
+				checkInView: true,
+				loadOnTransitionStart: true
+			},
+			navigation: {
+				nextEl: '.slider-button-next',
+				prevEl: '.slider-button-prev'
+			},
+			on: {
+				slideChange: function (swiper) {
+					if($(swiper.$el).closest('.news-big').hasClass('news-big')){
+						$(swiper.$el).closest('.news-big').find('.news-thumbs__item').removeClass('_active')
+	
+						$(swiper.$el).closest('.news-big').find(`.news-thumbs__item:eq(${swiper.realIndex})`).addClass('_active')
+					}
+				},
+			}
+		})
+
+		$('body').on('click', '.news-thumbs__item', function(e) {
+			e.preventDefault()
+
+			let numberSlide = $(this).data('index-slide');
+			newsImgSlider.slideToLoop(numberSlide);
 		})
 	}
 });
@@ -219,6 +257,18 @@ $(window).on('load', () => {
 			}
 		}
     })
+
+
+	if ( $('.sorting__link.active') ) {
+		$('.sorting__link.active').each( function() {
+			let offset = $(this).offset().left,
+				width = $(this).outerWidth()/2;
+
+			let	scroll = (offset + width) - ($(window).width()/2);
+
+			$(this).closest('.sorting').scrollLeft(scroll);
+		})
+	}
 
 
 	// let lastScrollTop = $(window).scrollTop();
@@ -280,8 +330,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		}, 200)
 	}
 
-	if ($('.voice-reviews__wrap').length){
-		videoVoiceSlider()
+	if ($('.main-about__videos').length){
+		aboutVideosSlider()
 	}
 })
 
@@ -326,8 +376,8 @@ $(window).on('resize', () => {
 		}
 	}
 
-	if ($('.voice-reviews__wrap').length){
-		videoVoiceSlider()
+	if ($('.main-about__videos').length){
+		aboutVideosSlider()
 	}
 });
 
@@ -367,51 +417,44 @@ function vacancyHeight(context, step) {
 }
 
 
-function videoVoiceSlider(){
-	if ( $(window).width() < 640 && !$('.voice-reviews__wrap').hasClass('swiper-initialized') ) {
-		$('.voice-reviews__wrap').addClass('swiper')
-		$('.voice-reviews__grid').addClass('swiper-wrapper')
-		$('.voice-reviews__grid').removeClass('_flex')
-		$('.voice-reviews__item, .voice-reviews__more').addClass('swiper-slide')
+function aboutVideosSlider(){
+	if ( $(window).width() < 640 && !$('.main-about__videos').hasClass('swiper-initialized') ) {
+		$('.main-about__videos').addClass('swiper')
+		$('.main-about__videos-wrap').addClass('swiper-wrapper')
+		$('.main-about__video').addClass('swiper-slide')
 
-		videoVoiceSwiper = new Swiper('.voice-reviews__wrap', {
+		aboutVideosSwiper = new Swiper('.main-about__videos', {
 			loop: false,
 			watchSlidesProgress: true,
 			watchOverflow: true,
-			spaceBetween: 30,
-			slidesPerView: 'auto',
+			spaceBetween: 20,
+			slidesPerView: 1,
 			preloadImages: false,
-			freeMode: {
-				enabled: true,
-				sticky: false,
-			},
 			lazy: {
 				loadPrevNext: true,
 				elementClass: 'lazyload',
 				enabled: true,
 				loadedClass: 'loaded',
 				checkInView: true,
-				loadOnTransitionStart: true,
-                preloaderClass: 'lazy-preloader'
+				loadOnTransitionStart: true
 			},
-			pagination: {
-				el: ".slider-progressbar",
-				type: "progressbar",
-			}
+			navigation: {
+				nextEl: '.slider-button-next',
+				prevEl: '.slider-button-prev'
+			},
 		})
 	}
-	else if ($(window).width() > 639 && $('.voice-reviews__wrap').hasClass('swiper-initialized')) {
-		if ($('.voice-reviews__wrap').length === 1 && $('.voice-reviews__wrap').hasClass('swiper-initialized')) {
-			videoVoiceSwiper.destroy(true, true)
-		} else if ($('.voice-reviews__wrap').length >= 2 && $('.voice-reviews__wrap').hasClass('swiper-initialized')) {
-			videoVoiceSwiper.forEach(function (element) {
+	else if ($(window).width() > 639 && $('.main-about__videos').hasClass('swiper-initialized')) {
+		if ($('.main-about__videos').length === 1 && $('.main-about__videos').hasClass('swiper-initialized')) {
+			aboutVideosSwiper.destroy(true, true)
+		} else if ($('.main-about__videos').length >= 2 && $('.main-about__videos').hasClass('swiper-initialized')) {
+			aboutVideosSwiper.forEach(function (element) {
 				element.destroy(true, true)
 			})
 		}
 
-		$('.voice-reviews__wrap').removeClass('swiper')
-		$('.voice-reviews__grid').removeClass('swiper-wrapper')
-		$('.voice-reviews__grid').addClass('_flex')
-		$('.voice-reviews__item, .voice-reviews__more').removeClass('swiper-slide')
+		$('.main-about__videos').removeClass('swiper')
+		$('.main-about__videos-wrap').removeClass('swiper-wrapper')
+		$('.main-about__video').removeClass('swiper-slide')
 	}
 }

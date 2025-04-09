@@ -25,6 +25,77 @@
 		max-width: 40.581%;
 	}
 
+	.career__coll{
+		width: calc(59% - 30px);
+	}
+
+	.service__coll{
+		width: calc(59% - 30px);
+	}
+
+	.service .text-block{
+		width: 100%;
+	}
+
+	.service__form{
+		margin-top: 60px;
+	}
+
+	.contacts__map{
+		width: calc(59% - 30px);
+	}
+
+
+	.news-big_marg{
+		margin-top: 27px;
+	}
+
+	.news-big__colr{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
+	.news-big__name{
+		font-size: 30px;
+	}
+
+	.news-big__text {
+		padding-left: 100px;
+		max-width: none;
+	}
+
+	.news-big__text::before{
+		width: 60px;
+	}
+
+
+	.news__grid{
+		margin-left: -30px;
+	}
+
+	.news__item {
+		margin-left: 30px;
+		width: calc(100% / 3 - 30px);
+	}
+
+	.news__item-img{
+		width: 80%;
+	}
+
+	.news__item-box{
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
+	.news__item-name{
+		font-size: 20px;
+	}
+
+	.news__item-text{
+		margin-top: 23px;
+	}
+
+
 	.footer__logo{
 		width: 200px;
 	}

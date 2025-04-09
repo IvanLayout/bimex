@@ -1,4 +1,159 @@
 @media (max-width: 479px)
 {
-	
+	.main-slide__colr{
+		width: calc(100% + 40px);
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+
+	.main-about__wrap{
+		padding: 143px 0 44px;
+	}
+
+	.main-about__pattern{
+		left: 50%;
+		transform: translateX(-50%);
+		width: 300%;
+		margin-left: 0;
+	}
+
+	.main-about__videos .slider-button-prev,
+	.main-about__videos .slider-button-next{
+		display: flex;
+	}
+
+	.main-about__videos{
+		min-height: calc(100vh - 187px);
+		padding-bottom: 44px;
+		width: 73.34%;
+		margin: 0 auto;
+	}
+
+	.main-about__videos::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 24px;
+		height: 24px;
+		margin-left: -12px;
+		background: url(../images/ic_drag2.svg) 50% no-repeat;
+	}
+
+	.main-about__video{
+		position: relative;
+		left: 0;
+		top: 0;
+		transform: none;
+	}
+
+	.main-about__video2{
+		margin-top: 25vh;
+	}
+
+	.main-about__video1-wrap,
+	.main-about__video2-wrap,
+	.main-about__video3-wrap{
+		padding-bottom: 62.91%;
+	}
+
+	.career__btns{
+		margin-left: -13px;
+	}
+
+	.career__btn{
+		margin-left: 13px;
+	}
+
+	.career__desc br{
+		display: none;
+	}
+
+
+	.form__line{
+		margin-bottom: 14px;
+	}
+
+	.form__flex{
+		margin-left: 0;
+	}
+
+	.form__flex .form__line{
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.form__flex .form__line._middle{
+		width: 100%;
+	}
+
+	.form__flex .form__line._big{
+		width: 100%;
+	}
+
+	.form__bot{
+		margin-top: 20px;
+	}
+
+
+	.btn-blue._dark{
+		font-size: 10px;
+		padding: 0 15px;
+	}
+
+
+	.news-big__text{
+		padding-left: 32px;
+	}
+
+	.news-big__text::before {
+		width: 20px;
+	}
+
+
+	.news__grid{
+		margin-top: 10px;
+	}
+
+	.news__item {
+		margin-top: 30px;
+		width: calc(100% - 20px);
+	}
+
+	.news__grid_inner .news__item:nth-child(n + 2){
+		display: none;
+	}
+
+	.news__item-img span{
+		min-height: 541px;
+	}
+
+
+	.news__item-text{
+		padding-left: 32px;
+		position: relative;
+	}
+
+	.news__item-text::before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 7px;
+		width: 20px;
+		height: 1px;
+		background: var(--color_hover);
+	}
+
+
+	.footer__links{
+		flex-wrap: nowrap;
+	}
+
+	.footer__links-link{
+		max-width: 170px;
+	}
+
+	.footer__links-link_small{
+		width: 105px;
+	}
 }
