@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!-- Переключение IE в последнию версию, на случай если в настройках пользователя стоит меньшая -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- Адаптирование страницы для мобильных устройств -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Запрет распознования номера телефона -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+		<!-- Заголовок страницы -->
+		<title>Заголовок страницы</title>
+
+		<!-- Данное значение часто используют(использовали) поисковые системы -->
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<!-- Традиционная иконка сайта, размер 16x16, прозрачность поддерживается. Рекомендуемый формат: .ico или .png -->
+		<link rel="shortcut icon" href="favicon.ico">
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+		<!-- Подключение файлов стилей -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css">
+		<link rel="stylesheet" href="css/fancybox.css">
+		<link rel="stylesheet" href="css/animation.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<link rel="stylesheet" href="css/response_1199.css" media="(max-width: 1199px)">
+		<link rel="stylesheet" href="css/response_1024.css" media="(max-width: 1024px)">
+		<link rel="stylesheet" href="css/response_767.css" media="(max-width: 767px)">
+		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)">
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="main">
+				<!-- Шапка -->
+				<header class="header">
+					<div class="cont _flex">
+						<div class="header__logo">
+							<a href="/">
+								<img src="images/logo.svg" alt="">
+								<img src="images/logo_white.svg" alt="">
+							</a>
+						</div>
+
+						<button type="button" class="mob-menu-btn">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+
+						<nav class="header__menu _flex">
+							<div class="header__menu-item _sub">
+								<a href="/" class="header__menu-link">
+									Услуги
+									<svg>
+										<use xlink:href="images/sprite.svg#arrow1"></use>
+									</svg>
+								</a>
+
+								<div class="header__submenu">
+									<div class="cont">
+										<div class="header__submenu-flex _flex">
+											<div class="header__submenu-col">
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Авиаперевозки</a>
+												</div>
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Автомобильные перевозки</a>
+												</div>
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Ж/д перевозки</a>
+												</div>
+											</div>
+											<div class="header__submenu-col">
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Морские и речные перевозки</a>
+												</div>
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Контейнерные перевозки</a>
+												</div>
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Перевозка тяжеловесного и негабаритного груза</a>
+												</div>
+											</div>
+											<div class="header__submenu-col">
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Портовая обработка</a>
+												</div>
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Таможенный сервис</a>
+												</div>
+												<div class="header__submenu-item">
+													<a href="/" class="header__submenu-link">Страхование</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="header__menu-item">
+								<a href="/" class="header__menu-link">о компании</a>
+							</div>
+							<div class="header__menu-item">
+								<a href="/" class="header__menu-link">новости</a>
+							</div>
+							<div class="header__menu-item">
+								<a href="/" class="header__menu-link">карьера</a>
+							</div>
+							<div class="header__menu-item">
+								<a href="/" class="header__menu-link">контакты</a>
+							</div>
+						</nav>
+
+						<div class="header__contacts _flex">
+							<a href="tel:+74951234567" class="header__phone">+7 495 123 45 67</a>
+
+							<button type="button" class="header__request">ОСТАВИТЬ ЗАЯВКУ</button>
+						</div>
+
+						<div class="mini-modal mini-modal_lang">
+							<button type="button" class="mini-modal__btn header__lang">
+								<span>EN</span>
+								<svg>
+									<use xlink:href="images/sprite.svg#arrow1"></use>
+								</svg>
+							</button>
+							
+							<div class="mini-modal__modal mini-modal__modal_lang">
+								<div>
+									<div>
+										<a href="/">Русский</a>
+									</div>
+									<div>
+										<a href="/">Английский</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+				<!-- End Шапка -->
+
+
+				<section class="page-inner">
+					<section class="service">
+						<div class="cont">
+							<div class="main-title _mob">Авиаперевозки</div>
+
+							<div class="service__flex _flex">
+								<div class="service__coll">
+									<div class="service__img">
+										<img src="images/tmp/service1.jpg" alt="">
+									</div>
+								</div>
+
+								<div class="service__colr">
+									<h1 class="main-title">Авиаперевозки</h1>
+
+									<div class="text-block text-block_marg">
+										<p>
+											Общий вес машины в сборе – 107 тонн. С целью минимизации транспортных расходов машину разобрали на несколько частей. Отгрузка производилась из города Парма (Италия), автомобильным транспортом, далее перевалка в порту Киль (Германия) на паром, линии DFDS. По прибытию в порт СПб, после таможенной очистки, машину вывезли автотранспортом на ж/д ст. Ржевка (Октябрьской ж/д), и перегрузили на подвижной состав. Ж/д перевозка до ст.Дземги (Дальневосточной ж/д), затем перевалка на специализированный автомобильный транспорт и доставка до поселка Черный Мыс.
+										</p>
+
+										<p>
+											Общий вес машины в сборе – 107 тонн. С целью минимизации транспортных расходов машину разобрали на несколько частей. Отгрузка производилась из города Парма (Италия), автомобильным транспортом, далее перевалка в порту Киль (Германия) на паром, линии DFDS. По прибытию в порт СПб, после таможенной очистки, машину вывезли автотранспортом на ж/д ст. Ржевка (Октябрьской ж/д), и перегрузили на подвижной состав. Ж/д перевозка до ст.Дземги (Дальневосточной ж/д), затем перевалка на специализированный автомобильный транспорт и доставка до поселка Черный Мыс.
+										</p>
+									</div>
+
+									<form action="" class="form service__form">
+										<div class="small-title service__small-title">Форма обратной связи</div>
+
+										<div class="form__flex _flex">
+											<div class="form__line _middle">
+												<input type="text" placeholder="Имя" value="" class="form__input">
+											</div>
+
+											<div class="form__line _big">
+												<input type="text" placeholder="Должность" value="" class="form__input">
+											</div>
+										</div>
+
+										<div class="form__line">
+											<input type="text" placeholder="Сообщение" value="" class="form__input">
+										</div>
+
+										<div class="form__bot _flex">
+											<div class="file-selection">
+												<input type="file" name="" id="file">
+
+												<label for="file" class="file-selection__path">
+													<span class="file-selection__path-icon">
+														<img data-src="images/ic_file.svg" src="images/img_plug.png" alt="" class="lazyload">
+													</span>
+													<span class="file-selection__path-name" data-text="Добавить файл">Добавить файл</span>
+												</label>
+											</div>
+
+											<div class="form__submit">
+												<button type="submit" class="btn-blue form__submit-btn">ОТПРАВИТЬ</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+			</div>
+
+
+			<footer class="footer">
+				<div class="cont">
+					<div class="footer__top _flex">
+						<div class="footer__logo">
+							<a href="/">
+								<img src="images/logo.svg" alt="">
+							</a>
+						</div>
+
+						<nav class="footer__menu _flex">
+							<div class="footer__menu-item">
+								<a href="/" class="footer__menu-link">о компании</a>
+							</div>
+							<div class="footer__menu-item">
+								<a href="/" class="footer__menu-link">новости</a>
+							</div>
+							<div class="footer__menu-item">
+								<a href="/" class="footer__menu-link">карьера</a>
+							</div>
+							<div class="footer__menu-item">
+								<a href="/" class="footer__menu-link">контакты</a>
+							</div>
+						</nav>
+
+						<div class="footer__contacts _flex">
+							<a href="tel:+74951234567" class="footer__phone">+7 495 123 45 67</a>
+
+							<button type="button" class="footer__request">ОСТАВИТЬ ЗАЯВКУ</button>
+						</div>
+
+						<div class="mini-modal mini-modal_lang">
+							<button type="button" class="mini-modal__btn footer__lang">
+								<span>EN</span>
+								<svg>
+									<use xlink:href="images/sprite.svg#arrow1"></use>
+								</svg>
+							</button>
+							
+							<div class="mini-modal__modal mini-modal__modal_lang">
+								<div>
+									<div>
+										<a href="/">Русский</a>
+									</div>
+									<div>
+										<a href="/">Английский</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer__bot _flex">
+						<div class="footer__copy">&copy; 2006-2025 BIMEX</div>
+
+						<div class="footer__links">
+							<a href="/" target="_blank" class="footer__links-link">Политика конфиденциальности</a>
+							<div class="footer__links-sep"></div>
+							<a href="/" target="_blank" class="footer__links-link">Условия использования</a>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+
+		<div class="supports-error">
+			Ваш браузер устарел рекомендуем обновить его до последней версии<br> или использовать другой более современный.
+		</div>
+
+
+		<section class="modal modal-gallery" id="modal-gallery">
+			<div class="modal-gallery__block">
+				<div class="modal-gallery__slider swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="modal-gallery__img">
+								<img data-src="images/tmp/gallery_img1.jpg" src="images/img_plug.png" alt="" class="lazyload">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="modal-gallery__img">
+								<img data-src="images/tmp/gallery_img1.jpg" src="images/img_plug.png" alt="" class="lazyload">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="modal-gallery__img">
+								<img data-src="images/tmp/gallery_img1.jpg" src="images/img_plug.png" alt="" class="lazyload">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="modal-gallery__img">
+								<img data-src="images/tmp/gallery_img1.jpg" src="images/img_plug.png" alt="" class="lazyload">
+							</div>
+						</div>
+					</div>
+
+					<div class="slider-button-prev">
+						<svg>
+							<use xlink:href="images/sprite.svg#arrow"></use>
+						</svg>
+					</div>
+					<div class="slider-button-next">
+						<svg>
+							<use xlink:href="images/sprite.svg#arrow"></use>
+						</svg>
+					</div>
+				</div>
+
+				<div class="modal-gallery__name">инновации <br>На полях россии</div>
+			</div>
+		</section>
+
+
+		<!-- Подключение javascript файлов -->
+		<div class="js-load"></div>
+		<script src="js/jquery-3.5.0.min.js"></script>
+
+		<script src="js/swiper-bundle.min.js"></script>
+		<script src="js/fancybox.js"></script>
+		<script src="js/nice-select.js"></script>
+		<script src="js/inputmask.min.js"></script>
+
+		<script src="js/vivus.min.js"></script>
+
+		<script src="js/functions.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

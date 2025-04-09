@@ -1,0 +1,145 @@
+@media (max-width: 767px)
+{
+	.main-slide__img {
+		max-height: 51vh;
+	}
+
+	.history__slider {
+		max-width: none;
+		width: 100%;
+		padding-bottom: 44px;
+		padding-right: 26.5%;
+	}
+
+	.history__slider::before{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 24px;
+		height: 24px;
+		margin-left: -12px;
+		background: url(../images/ic_drag.svg) 50% no-repeat;
+	}
+
+	.history__bg{
+		padding: 96px 16px 66px 42px;
+	}
+
+	.history__date{
+		font-size: 30px;
+		line-height: 66px;
+	}
+
+	.history__slider .swiper-slide-active .history__date{
+		font-size: 60px;
+	}
+
+	.history__desc{
+		margin-top: 21px;
+	}
+
+	.history__slider .swiper-slide {
+		transform: scale(.7) translateX(-12%);
+	}
+
+	.history__slider .swiper-slide-active + .swiper-slide + .swiper-slide + .swiper-slide {
+		transform: scale(.7) translateX(-100%);
+	}
+	
+	.history__slider .swiper-slide-active {
+		transform: scale(1) translate(0);
+	}
+
+	.slider-button-prev,
+	.slider-button-next{
+		bottom: 0;
+	}
+
+	.slider-button-prev{
+		right: 50%;
+		margin-right: 34px;
+	}
+
+	.slider-button-next{
+		right: auto;
+		left: 50%;
+		margin-left: 34px;
+	}
+
+	.history__slider .slider-button-prev{
+		margin-right: 34px;
+		margin-left: 0;
+	}
+
+	.history__slider .slider-button-next{
+		margin-right: 0;
+		margin-left: 34px;
+	}
+
+	/* .history__slider .slider-button-prev {
+		margin-right: calc(100vw/2 * -1);
+	} */
+
+	.footer{
+		padding-top: 60px;
+		padding-bottom: 38px;
+	}
+
+	.footer__logo img{
+		width: 68px;
+	}
+
+	.footer .mini-modal_lang{
+		display: none;
+	}
+
+	.footer__contacts{
+		width: calc(100% + 32px);
+		margin-left: -16px;
+		margin-right: -16px;
+		margin-top: 20px;
+		padding: 16px 16px 0;
+		border-top: 1px solid #E4F0F6;
+	}
+
+	.footer__phone
+	{
+		width: 100%;
+	}
+
+	.footer__phone a{
+		font-size: 18px;
+		line-height: normal;
+	}
+
+	.footer__request{
+		margin: 15px 0 0;
+	}
+
+	.footer__top{
+		width: calc(100% + 32px);
+		margin-left: -16px;
+		margin-right: -16px;
+		margin-bottom: 29px;
+		padding: 0 16px 16px;
+	}
+
+	.footer__copy{
+		width: 100%;
+		margin-bottom: 14px;
+	}
+
+	.footer__links{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		align-content: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.footer__links-sep{
+		display: none;
+	}
+}

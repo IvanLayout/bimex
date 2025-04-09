@@ -1,0 +1,52 @@
+@media (max-width: 1599px)
+{
+	.header__logo{
+		width: 260px;
+	}
+
+
+	.main-about__video {
+		top: 34%;
+		left: 12%;
+		width: 20.474%;
+	}
+
+	.main-about__video2{
+		top: 45%;
+		width: 16.37%;
+	}
+
+	.main-about__video3 {
+		left: 70.2%;
+		top: 14%;
+		width: 20.474%;
+	}
+
+	.main-about__box {
+		max-width: 655px;
+		padding-top: 5vh;
+		padding-bottom: 6vh;
+	}
+
+
+	.history__video {
+		left: 25.9%;
+		width: 21.7%;
+		height: 25.3vh;
+	}
+
+
+	.history__slider .swiper-slide-active .history__date {
+		font-size: 136px;
+	}
+
+	.slider-button-prev,
+	.slider-button-next{
+		bottom: 36px;
+	}
+
+
+	.footer__logo{
+		width: 260px;
+	}
+}
