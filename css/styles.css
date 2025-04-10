@@ -2000,6 +2000,15 @@ button
 	z-index: 1;
 }
 
+.history__video .swiper-wrapper{
+	height: 100%;
+}
+
+.history__video .swiper-slide{
+	height: auto;
+	position: relative;
+}
+
 .history__video video{
 	position: absolute;
 	top: 0;
@@ -2029,10 +2038,12 @@ button
 	transform: scale(.7);
 	transform-origin: center left;
 	transition: transform .2s linear;
+	cursor: pointer;
 }
 
 .history__slider .swiper-slide-active{
 	transform: scale(1) translate(0);
+	cursor: inherit;
 }
 
 .history__slider .swiper-slide-active + .swiper-slide + .swiper-slide{
@@ -2257,6 +2268,10 @@ button
 	border-color: #0f3292;
 }
 
+
+.news_pad{
+	padding: 60px 0;
+}
 
 .news__wrap{
 	width: 98.54%;

@@ -160,13 +160,14 @@ $(() => {
 
 
 	if ($('.history__slider').length) {
-		new Swiper('.history__slider', {
+		historySlider = new Swiper('.history__slider', {
 			loop: false,
 			watchSlidesProgress: true,
 			watchOverflow: true,
 			spaceBetween: 10,
 			slidesPerView: 'auto',
 			preloadImages: false,
+			slideToClickedSlide: true,
 			lazy: {
 				loadPrevNext: true,
 				elementClass: 'lazyload',
@@ -180,6 +181,28 @@ $(() => {
 				prevEl: '.slider-button-prev'
 			},
 		})
+
+		historyVideo = new Swiper(".history__video", {
+			effect: 'fade',
+			spaceBetween: 20,
+			slidesPerView: 1,
+			watchSlidesProgress: true,
+			watchOverflow: true,
+			preloadImages: false,
+			allowSlideNext: false,
+			allowSlidePrev: false,
+			allowTouchMove: false,
+			lazy: {
+				loadPrevNext: true,
+				elementClass: 'lazyload',
+				enabled: true,
+				loadedClass: 'loaded',
+				checkInView: true,
+				loadOnTransitionStart: true
+			}
+		})
+
+		historySlider.controller.control = historyVideo;
 	}
 
 

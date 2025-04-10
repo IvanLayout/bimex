@@ -430,6 +430,10 @@
 	}
 
 
+	.news_pad{
+		padding: 40px 0;
+	}
+
 	.news-big__coll{
 		width: 100%;
 		padding-bottom: 0;

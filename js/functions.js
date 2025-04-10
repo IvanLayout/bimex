@@ -93,7 +93,7 @@ $(() => {
 			$('body').removeClass('_menu-open')
 		}
 
-		$('html, body').stop().animate({ scrollTop: $(href).offset().top - addOffset }, 1000)
+		$('html, body').stop().animate({ scrollTop: $(href).offset().top }, 1000)
 	})
 
 
