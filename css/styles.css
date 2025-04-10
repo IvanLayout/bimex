@@ -443,14 +443,20 @@ button
 .header__logo{
 	width: 383px;
 	margin-right: auto;
+	font-size: 0;
+	padding-bottom: 24px;
 }
 
 .header__logo a{
 	display: inline-block;
+	font-size: 0;
 }
 
 .header__logo img{
 	display: block;
+	width: 156px;
+	font-size: 20px;
+	color: #fff;
 }
 
 .header__logo img + img{

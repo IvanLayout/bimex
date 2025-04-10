@@ -184,6 +184,9 @@ $(() => {
 
 		historyVideo = new Swiper(".history__video", {
 			effect: 'fade',
+			fadeEffect: {
+				crossFade: true
+			},
 			spaceBetween: 20,
 			slidesPerView: 1,
 			watchSlidesProgress: true,

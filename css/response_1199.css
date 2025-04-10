@@ -5,11 +5,15 @@
 	}
 
 	.mini-modal_lang {
-		margin-left: 30px;
+		margin-left: 25px;
 	}
 
 	.header__menu-item + .header__menu-item {
 		margin-left: 22px;
+	}
+
+	.header__request{
+		margin-left: 25px;
 	}
 
 	.main-slide__coll {
