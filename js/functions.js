@@ -177,6 +177,20 @@ $(() => {
 			parent.find('.file-selection__path').removeClass('_active')
 		}
 	})
+
+
+	$('.form__input').keydown(function() {
+		let thisEl = $(this)
+		setTimeout( function() {
+			let value = thisEl.val()
+
+			if ( value != '' ) {
+				thisEl.addClass('correctly')
+			} else {
+				thisEl.removeClass('correctly')
+			}
+		}, 10)
+	})
 })
 
 // Вспомогательные функции

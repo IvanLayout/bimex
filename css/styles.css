@@ -623,6 +623,17 @@ button
 	background: url(../images/phone.svg) 50% no-repeat;
 }
 
+.header__phone a span{
+	border-bottom: 2px solid transparent;
+	transition: border .2s linear;
+}
+
+@media (any-hover: hover){
+	.header__phone a span:hover{
+		border-bottom-color: var(--color_hover);
+	}
+}
+
 .header__request{
 	display: inline-block;
 	padding: 0 17px;
@@ -1073,7 +1084,7 @@ button
     background: #f1f7fa;
 	border-radius: 4px;
 
-    transition: border .2s linear, background .2s linear;
+    transition: border .2s linear, background-color .2s linear;
 }
 
 .form .form__input:focus{
@@ -1082,12 +1093,27 @@ button
 }
 
 .form .error,
+.form .form__input.error,
 .form .error + .nice-select .current
 {
     color: #ac1313;
 
     border-color: #ac1313;
 	background-color: transparent;
+}
+
+.form .form__input.correctly:not(:focus){
+	padding-right: 30px;
+	background-image: url(../images/ic_correctly.svg);
+	background-position: calc(100% - 9px) center;
+	background-repeat: no-repeat;
+}
+
+.form .form__input.error{
+	padding-right: 30px;
+	background-image: url(../images/ic_error.svg);
+	background-position: calc(100% - 9px) center;
+	background-repeat: no-repeat;
 }
 
 .form .form__input:disabled,
@@ -1159,6 +1185,17 @@ button
 
     width: 24px;
     height: 24px;
+}
+
+.file-selection__path-name{
+	border-bottom: 1px solid transparent;
+	transition: border .2s linear;
+}
+
+@media (any-hover: hover){
+	.file-selection__path:hover .file-selection__path-name{
+		border-bottom-color: var(--color_hover);
+	}
 }
 
 
@@ -1745,11 +1782,11 @@ button
 
 @media (any-hover: hover){
 	.slider-thumbs__item:hover{
-		background: rgba(134, 138, 148, 0.6);
+		background: var(--color_hover);
 	}
 
 	.page-slider._white .slider-thumbs__item:hover{
-		background: rgba(255, 255, 255, 0.9);
+		background: var(--color_hover);
 	}
 	
 }
@@ -1997,13 +2034,14 @@ button
 
 .history__video{
 	position: absolute;
-	top: 11.4vh;
+	top: calc(24.9vh + 85px);
     left: 33.9%;
     width: 19.7%;
     height: 22.3vh;
 	border-radius: 3px;
 	overflow: hidden;
 	z-index: 1;
+	transform: translateY(-100%);
 }
 
 .history__video .swiper-wrapper{
@@ -2214,6 +2252,14 @@ button
 	border-top: 1px solid #e4f0f6;
 }
 
+.career__title{
+	font-family: var(--second-family);
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 1.25;
+	color: #20242c;
+}
+
 .career__desc{
 	margin-top: 17px;
 }
@@ -2241,7 +2287,7 @@ button
 
 .sorting__link
 {
-	font-size: 12px;
+	font-size: 10px;
 	line-height: 34px;
     color: #7c818a;
 	text-decoration: none;
@@ -2716,6 +2762,17 @@ button
 	height: 14px;
 	margin-top: -7px;
 	background: url(../images/phone.svg) 50% no-repeat;
+}
+
+.footer__phone a span{
+	border-bottom: 2px solid transparent;
+	transition: border .2s linear;
+}
+
+@media (any-hover: hover){
+	.footer__phone a span:hover{
+		border-bottom-color: var(--color_hover);
+	}
 }
 
 .footer__request{
